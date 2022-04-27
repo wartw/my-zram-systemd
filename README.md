@@ -1,4 +1,4 @@
- ZRAM
+ZRAM(全通用版)
 ```
 git clone https://github.com/wartw/webcheck-and-zram.git
 cd webcheck-and-zram
@@ -8,7 +8,8 @@ systemctl enable zram.service
 systemctl daemon-reload
 systemctl start zram.service
 ```
-CHECK
+----
+CHECK安裝(LNMPA)
 ```
 git clone https://github.com/wartw/webcheck-and-zram.git
 cd webcheck-and-zram
@@ -21,4 +22,11 @@ chmod +x *_check.sh
 ./httpd_check.sh
 ./mysql_check.sh
 ./ngnix_check.sh
+```
+----
+CHECK的crontab設定
+```
+*/1 * * * * sh /home/httpd_check.sh
+*/1 * * * * sh /home/mysql_check.sh
+*/1 * * * * sh /home/ngnix_check.sh
 ```
