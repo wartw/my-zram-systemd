@@ -33,8 +33,8 @@ chmod +x *.sh
 ----
 CHECK的crontab設定
 ```
-*/1 * * * * sh /home/httpd_check.sh
-*/1 * * * * sh /home/mysql_check.sh
-*/1 * * * * sh /home/ngnix_check.sh
-*/5 * * * * sh /home/clean.sh
+*/1 * * * * /home/httpd_check.sh
+*/1 * * * * /home/mysql_check.sh
+*/1 * * * * /home/ngnix_check.sh
+*/5 * * * * /home/clean.sh
 ```
