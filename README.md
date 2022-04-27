@@ -23,8 +23,9 @@ mkdir /home/check
 cp httpd_check.sh /home/check
 cp mysql_check.sh /home/check
 cp ngnix_check.sh /home/check
+cp clean.sh /home/check
 cd /home/check
-chmod +x *_check.sh
+chmod +x *.sh
 ./httpd_check.sh
 ./mysql_check.sh
 ./ngnix_check.sh
@@ -35,4 +36,5 @@ CHECK的crontab設定
 */1 * * * * sh /home/httpd_check.sh
 */1 * * * * sh /home/mysql_check.sh
 */1 * * * * sh /home/ngnix_check.sh
+*/5 * * * * sh /home/clean.sh
 ```
