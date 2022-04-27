@@ -21,7 +21,7 @@ else
         echo "------------------result------------------" >> $logs_file
         echo 'mariadb server is stopped!!'  >> $logs_file
         echo "------------------result------------------" >> $logs_file
-        echo '------------------start mariadb : lnmp ngnix restart------------------' >> $logs_file
+        echo '------------------start mariadb : lnmp mariadb restart------------------' >> $logs_file
         lnmp mariadb restart >> $logs_file
         mariadb_start_port=`netstat -nlt |grep 3306 |awk '{print $4}'| cut -d : -f 2`
         echo "mariadb_start_port:$mariadb_start_port" >> $logs_file
