@@ -3,10 +3,16 @@ ZRAM(全通用版)
 git clone https://github.com/wartw/webcheck-and-zram.git
 cd webcheck-and-zram
 cp zram zram.service /etc/systemd/system/
+cp freemem.sh /
 chmod +x /etc/systemd/system/zram
 systemctl enable zram.service
 systemctl daemon-reload
 systemctl start zram.service
+```
+----
+ZRAM的crontab設定
+```
+*/1 * * * * sh /freemem.sh
 ```
 ----
 CHECK安裝(LNMPA)
