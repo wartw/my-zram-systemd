@@ -5,7 +5,7 @@ NUM_CPUS=$(nproc)
 NUM_DEVS=$NUM_CPUS
 FACTOR=10 # percentage
 TOTALRAM=$(grep MemTotal /proc/meminfo | awk ' { print $2 } ')
-DISK_SIZE=$(($TOTALRAM/$NUM_CPUS*$FACTOR/100*10240*6))
+DISK_SIZE=$(($TOTALRAM/$NUM_CPUS*$FACTOR/100*10240*1))
 
 #Defaults for vm.overcommit_memory, vm.page-cluster, vm.spwapiness
 OVERCOMMIT_MEMORY=0
