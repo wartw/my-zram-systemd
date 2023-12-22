@@ -1,3 +1,17 @@
+SWAP OVZ
+```
+git clone https://github.com/wartw/webcheck-and-zram.git
+cd webcheck-and-zram
+chmod +x fakeswap.sh
+sh fakeswap.sh 1024
+```
+SWAP
+```
+git clone https://github.com/wartw/webcheck-and-zram.git
+cd webcheck-and-zram
+chmod +x swap.sh
+sh swap.sh 
+```
 ZRAM(全通用版)
 ```
 git clone https://github.com/wartw/webcheck-and-zram.git
